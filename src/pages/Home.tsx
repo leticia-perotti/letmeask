@@ -34,6 +34,10 @@ export function Home() {
         alert ('Room does not exists');
         return;
       }
+      if(roomRef.val().endedAt) {
+        alert("A sala já foi encerrada!")
+        return;
+      }
 
       history.push(`/rooms/${roomCode}`);
 
